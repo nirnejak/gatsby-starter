@@ -1,5 +1,7 @@
 import React from "react"
+
 import GatsbyLink from "gatsby-link"
+
 import PropTypes from "prop-types"
 
 const Link = (props) => {
