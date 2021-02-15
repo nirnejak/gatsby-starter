@@ -14,20 +14,20 @@ const Input = (props) => {
     case "color":
     case "tel":
     case "url":
-      return <input type={props.type} {...props} />
+      return <input className="input" type={props.type} {...props} />
     case "range":
-      return <input type={props.type} {...props} />
+      return <input className="input" type={props.type} {...props} />
     case "date":
     case "datetime-local":
-      return <input type={props.type} {...props} />
+      return <input className="input" type={props.type} {...props} />
     case "file":
-      return <input type={props.type} {...props} />
+      return <input className="input" type={props.type} {...props} />
     case "check":
     case "radio":
       return (
         <label htmlFor={props.id}>
           {props.label}
-          <input type={props.type} {...props} />
+          <input className="input" type={props.type} {...props} />
         </label>
       )
     case "textarea":
