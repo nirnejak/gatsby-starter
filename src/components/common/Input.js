@@ -9,14 +9,31 @@ const Input = (props) => {
     case "text":
     case "email":
     case "number":
+    case "password":
+    case "search":
+    case "color":
+    case "tel":
+    case "url":
+      return <input type={props.type} {...props} />
+    case "range":
+      return <input type={props.type} {...props} />
+    case "date":
+    case "datetime-local":
+      return <input type={props.type} {...props} />
+    case "file":
       return <input type={props.type} {...props} />
     case "check":
+    case "radio":
       return (
-        <label>
+        <label htmlFor={props.id}>
+          {props.label}
           <input type={props.type} {...props} />
         </label>
       )
     case "textarea":
+      return <textarea {...props} />
+    case "submit":
+    case "reset":
       return <textarea {...props} />
     default:
       return null
@@ -24,6 +41,8 @@ const Input = (props) => {
 }
 
 Input.propTypes = {
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
 }
 
