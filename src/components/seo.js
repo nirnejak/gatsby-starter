@@ -8,16 +8,19 @@ import PropTypes from "prop-types"
 function SEO({ children, description, lang, meta, title, image, path }) {
   const { site } = useStaticQuery(query)
 
+  const metaTitle = title || site.siteMetadata.title
+  const metaImage = image || site.siteMetadata.image
   const metaDescription = description || site.siteMetadata.description
-  const url = path
+
+  const metaUrl = path
     ? `${site.siteMetadata.siteUrl}${path}/`
-    : `${site.siteMetadata.siteUrl}/`
+    : `${site.siteMetadata.siteUrl}`
 
   return (
     <Helmet
       htmlAttributes={{ lang }}
-      title={title}
-      titleTemplate={title}
+      title={metaTitle}
+      titleTemplate={metaTitle}
       meta={[
         {
           content: `width=device-width, initial-scale=1`,
@@ -32,7 +35,7 @@ function SEO({ children, description, lang, meta, title, image, path }) {
           name: `author`,
         },
         {
-          content: site.siteMetadata.siteImage,
+          content: metaImage,
           name: `image`,
         },
         {
@@ -53,16 +56,16 @@ function SEO({ children, description, lang, meta, title, image, path }) {
           itemprop: "description",
         },
         {
-          content: site.siteMetadata.siteImage,
+          content: metaDescription,
           itemprop: "description",
         },
         // Open Graph
         {
-          content: url,
+          content: metaUrl,
           property: `og:url`,
         },
         {
-          content: title,
+          content: metaTitle,
           property: `og:title`,
         },
         {
@@ -74,30 +77,26 @@ function SEO({ children, description, lang, meta, title, image, path }) {
           property: `og:type`,
         },
         {
-          content: image || site.siteMetadata.siteImage,
+          content: metaImage,
           property: `og:image`,
         },
         {
-          href: url,
+          href: metaUrl,
           name: "canonical",
         },
         {
-          href: url,
+          href: metaUrl,
           hreflang: "en",
           name: "alternate",
         },
         {
-          href: url,
+          href: metaUrl,
           hreflang: "x-default",
           name: "alternate",
         },
       ].concat(meta)}
     >
       {children}
-      <script
-        defer
-        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-      />
     </Helmet>
   )
 }
