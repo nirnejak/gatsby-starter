@@ -20,7 +20,15 @@
     ```
 
     ```sh
+    npm run prepare
+    ```
+
+    ```sh
     npm run build
+    ```
+
+    ```sh
+    npm run clean
     ```
 
     ```sh
