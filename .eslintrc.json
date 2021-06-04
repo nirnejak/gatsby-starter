@@ -6,8 +6,11 @@
   },
   "extends": [
     "standard",
+    "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -21,14 +24,13 @@
     "sourceType": "module"
   },
   "ignorePatterns": ["gatsby-config.js"],
-  "plugins": ["react", "react-hooks"],
+  "plugins": ["react", "react-hooks", "jsx-a11y"],
   "rules": {
     "react/jsx-no-useless-fragment": "error",
 
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",
 
-    "sort-keys": "error",
     "import/order": [
       "error",
       {
