@@ -1,10 +1,21 @@
 <h1 align="center">
-  Nirnejak' Gatsby Starter
+  Nirnejak's Gatsby Starter
 </h1>
 
 ## About
 
 This Gatsby Started comes pre configured with PWA, Google Analytics, Image Transform, Sass and PostCSS and some SEO plugins. To improve the code quality and developer experience it also ships with ESLint, Prettier and Pre-commit setup out of the box.
+
+## Uses
+
+- [Gatsby](https://www.gatsbyjs.org/)
+- [PWA](https://developers.google.com/web/progressive-web-apps/)
+- [Sass](https://sass-lang.com/)
+- [PostCSS](https://postcss.org/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Pre-commit](https://pre-commit.com/)
+- [BEM](http://getbem.com/)
 
 ## 🚀 Quick start
 

@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Jitendra Nirnejak <jeetnirnejak@gmail.com>",
   "dependencies": {
-    "gatsby": "^4.19.1",
+    "gatsby": "^4.19.2",
     "gatsby-plugin-canonical-urls": "^4.19.0",
     "gatsby-plugin-catch-links": "^4.19.0",
     "gatsby-plugin-force-trailing-slashes": "^1.0.6",
@@ -38,7 +38,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
